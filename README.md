@@ -1,5 +1,7 @@
 ## Hi there 👋
 
+Don't just fork, star too 🥺⭐
+
 <!--
 **rathod-ramraj/rathod-ramraj** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
 
