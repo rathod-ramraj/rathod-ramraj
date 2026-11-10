@@ -199,12 +199,12 @@ def hero():
 
     body = f"""
 <defs>
-  <linearGradient id="shine" gradientUnits="userSpaceOnUse" x1="0" y1="0" x2="600" y2="0">
-    <stop offset="0" stop-color="{INK}"/><stop offset=".42" stop-color="{INK}"/>
-    <stop offset=".50" stop-color="{TECH}"/><stop offset=".58" stop-color="{INK}"/>
+  <linearGradient id="shine" gradientUnits="userSpaceOnUse" x1="0" y1="0" x2="700" y2="0">
+    <stop offset="0" stop-color="{INK}"/><stop offset=".40" stop-color="{INK}"/>
+    <stop offset=".50" stop-color="{TECH}"/><stop offset=".60" stop-color="{INK}"/>
     <stop offset="1" stop-color="{INK}"/>
-    <animateTransform attributeName="gradientTransform" type="translate" values="-600 0;600 0;600 0"
-      keyTimes="0;.45;1" dur="7s" begin="1.4s" repeatCount="indefinite"/>
+    <animateTransform attributeName="gradientTransform" type="translate" values="-700 0;700 0;700 0"
+      keyTimes="0;.5;1" dur="7s" begin="1.4s" repeatCount="indefinite"/>
   </linearGradient>
 </defs>
 <rect width="{W}" height="{h}" rx="14" fill="{PAPER}"/>
@@ -212,7 +212,7 @@ def hero():
   <rect class="live" x="48" y="44" width="8" height="8" rx="2" fill="{TECH}"/>
   <text x="66" y="52" font-family="{MONO}" font-size="12" letter-spacing="1.2" fill="{MUTED}">{HEADLINE}</text>
 </g>
-<text class="r" {d(0.15)} x="44" y="152" font-family="{SERIF}" font-size="94" letter-spacing="-2.5" fill="{INK}">{FULL_NAME_FIRST} <tspan font-style="italic" fill="url(#shine)">{FULL_NAME_LAST}</tspan></text>
+<text class="r" {d(0.15)} x="44" y="152" font-family="{SERIF}" font-size="94" letter-spacing="-2.5" fill="url(#shine)">{FULL_NAME_FIRST} <tspan font-style="italic">{FULL_NAME_LAST}</tspan></text>
 <g class="r" {d(0.40)}>
   {text_lines(48, 204, TAGLINE, 28, f'font-family="{SANS}" font-size="19" fill="{INK_SOFT}"')}
 </g>
