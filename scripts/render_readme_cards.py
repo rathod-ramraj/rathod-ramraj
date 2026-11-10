@@ -212,7 +212,7 @@ def hero():
   <rect class="live" x="48" y="44" width="8" height="8" rx="2" fill="{TECH}"/>
   <text x="66" y="52" font-family="{MONO}" font-size="12" letter-spacing="1.2" fill="{MUTED}">{HEADLINE}</text>
 </g>
-<text class="r" {d(0.15)} x="44" y="152" font-family="{SERIF}" font-size="94" letter-spacing="-2.5" fill="url(#shine)"><tspan font-style="normal">{FULL_NAME_FIRST}</tspan> <tspan font-style="italic">{FULL_NAME_LAST}</tspan></text>
+<text class="r" {d(0.15)} x="44" y="152" font-size="94" letter-spacing="-2.5" fill="url(#shine)"><tspan font-family="{SERIF}" font-style="normal" font-weight="400">{FULL_NAME_FIRST}</tspan> <tspan font-family="{SERIF}" font-style="italic" font-weight="400">{FULL_NAME_LAST}</tspan></text>
 <g class="r" {d(0.40)}>
   {text_lines(48, 204, TAGLINE, 28, f'font-family="{SANS}" font-size="19" fill="{INK_SOFT}"')}
 </g>
