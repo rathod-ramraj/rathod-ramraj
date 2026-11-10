@@ -273,6 +273,7 @@ def tile(name, label, color, on, num, word, blurb, delay, pos):
         f'font-size="14" fill="{on}" opacity=".92">{escape(l)}</text>'
         for i, l in enumerate(lines)
     )
+    fs = 36 if len(f"{num} {word}") > 9 else 44
     body = f"""
 <defs>
   <clipPath id="card"><rect width="{TILE_W}" height="{TILE_H}" rx="14"/></clipPath>
@@ -292,7 +293,7 @@ def tile(name, label, color, on, num, word, blurb, delay, pos):
   <text class="sl" {d(delay + 0.35)} x="24" y="38" font-family="{MONO}" font-size="12" letter-spacing="1.2" fill="{on}">{label}</text>
   <g class="ai" {d(delay + 0.5)}><text class="n" style="animation-delay:{delay + 1.3:.2f}s" x="250" y="38" font-family="{MONO}" font-size="14" fill="{on}">&#8594;</text></g>
   <g clip-path="url(#slot)"><g class="ro" {d(delay + 0.45)}>
-    {count_up(num, word, 22, 112, f'font-family="{SERIF}" font-size="44" fill="{on}"', delay + 0.45)}
+    {count_up(num, word, 22, 112, f'font-family="{SERIF}" font-size="{fs}" fill="{on}"', delay + 0.45)}
   </g></g>
   {blurb_svg}
 </g>
@@ -550,9 +551,9 @@ if __name__ == "__main__":
         "EXPERIENCE",
         STUDIO,
         "#ffffff",
-        "NITJ",
-        "& C-DAC",
-        "B.Tech IT student at NIT Jalandhar and Cyber Security Intern at C-DAC Noida.",
+        "wprise.ai",
+        "intern",
+        "Software Developer Intern at wprise.ai and B.Tech IT student at NIT Jalandhar.",
         3.35,
         1,
     )
