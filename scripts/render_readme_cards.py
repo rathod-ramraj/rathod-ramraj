@@ -273,7 +273,8 @@ def tile(name, label, color, on, num, word, blurb, delay, pos):
         f'font-size="14" fill="{on}" opacity=".92">{escape(l)}</text>'
         for i, l in enumerate(lines)
     )
-    fs = 36 if len(f"{num} {word}") > 9 else 44
+    total_len = len(f"{num} {word}")
+    fs = 26 if total_len > 15 else 36 if total_len > 9 else 44
     body = f"""
 <defs>
   <clipPath id="card"><rect width="{TILE_W}" height="{TILE_H}" rx="14"/></clipPath>
@@ -551,9 +552,9 @@ if __name__ == "__main__":
         "EXPERIENCE",
         STUDIO,
         "#ffffff",
-        "wprise.ai",
+        "wprise.ai & C-DAC",
         "intern",
-        "Software Developer Intern at wprise.ai and B.Tech IT student at NIT Jalandhar.",
+        "Software Developer Intern at wprise.ai and Cyber Security Intern at C-DAC Noida.",
         3.35,
         1,
     )
